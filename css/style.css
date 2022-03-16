@@ -1,3 +1,5 @@
+/* scrollbar */
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -31,7 +33,12 @@
   ::-webkit-scrollbar-corner {
     background: transparent;
   }
+/* nav */
+nav{
+  background-color: #3a546d; !important
+}
 
+/* main */
 .jumbo{
     background-color: #1abc9c;
 }
@@ -43,7 +50,9 @@ h2 {
     text-align: center;
 }
 h2:before,
-h2:after {
+h2:after,
+#about h2:after,
+#about h2:before {
     background-color: rgb(255, 255, 255);
     content: "";
     display: inline-block;
@@ -53,9 +62,9 @@ h2:after {
     width: 10%;
     border-radius: 20px;
 }
-section:nth-child(2) > h2:before,
-section:nth-child(2) > h2:after{
-    background-color: #000000;
+section h2:before,
+section h2::after{
+  background-color: #000000;
 }
 h2:before {
     right: 0.5em;
@@ -65,6 +74,37 @@ h2:after {
     left: 0.5em;
     margin-right: -50%;
 }
+.wrapper{
+  position: relative;
+}
+.wrapper:hover .layover{
+  background-color: rgba(26, 188, 156, 0.7);
+  border-radius: 5px;
+}
+.wrapper:hover .layover i.fa-plus{
+  display: block;
+}
+.layover{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.layover i.fa-plus{
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: white;
+}
+.btn{
+  color: white;
+}
+
+/* footer */
 footer{
     background-color: #3a546d;
 }
@@ -77,3 +117,8 @@ footer i{
     background-color: #2c3e50;
     height: 80px;
 }
+.colored{
+  color: #1db599;
+}
+
+
